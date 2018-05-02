@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+    <link rel="stylesheet" href="../css/dropload.css">
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>机构信息</title>
+</head>
+<body>
+<div class="team-info">
+    <div class="head">
+        <input type="text" class="search" placeholder="请输入关键字">
+        <div class="all">全部</div>
+    </div>
+    <div class="info-list">
+        <div class="info-item">
+            <div class="info-title">四川鼎诚司法鉴定中心</div>
+            <div class="info-address">地址：成都市墨香路87号</div>
+            <div class="info-phone">电话：19288989909</div>
+        </div>
+        <div class="info-item">
+            <div class="info-title">四川鼎诚司法鉴定中心</div>
+            <div class="info-address">地址：成都市墨香路87号</div>
+            <div class="info-phone">电话：19288989909</div>
+        </div>
+        <div class="info-item">
+            <div class="info-title">四川鼎诚司法鉴定中心</div>
+            <div class="info-address">地址：成都市墨香路87号</div>
+            <div class="info-phone">电话：19288989909</div>
+        </div>
+        <div class="info-item">
+            <div class="info-title">四川鼎诚司法鉴定中心</div>
+            <div class="info-address">地址：成都市墨香路87号</div>
+            <div class="info-phone">电话：19288989909</div>
+        </div>
+        <div class="info-item">
+            <div class="info-title">四川鼎诚司法鉴定中心</div>
+            <div class="info-address">地址：成都市墨香路87号</div>
+            <div class="info-phone">电话：19288989909</div>
+        </div>
+        <div class="info-item">
+            <div class="info-title">四川鼎诚司法鉴定中心</div>
+            <div class="info-address">地址：成都市墨香路87号</div>
+            <div class="info-phone">电话：19288989909</div>
+        </div>
+    </div>
+</div>
+<script src="../js/zepto.js"></script>
+<script src="../js/dropload.js"></script>
+<script>
+	$('.activity').dropload({
+		scrollArea : window,
+		loadDownFn : function(me){
+			$.ajax({
+				type: 'GET',
+				url: '../data.json',
+				dataType: 'json',
+				success: function(data){
+					setTimeout(function(){
+						var $item = $('<div class="info-item">\n' +
+							'            <div class="info-title">四川鼎诚司法鉴定中心</div>\n' +
+							'            <div class="info-address">地址：成都市墨香路87号</div>\n' +
+							'            <div class="info-phone">电话：19288989909</div>\n' +
+							'        </div>');
+						// 每次数据加载完，必须重置
+						for(var i=0;i<4;i++){
+							$('.info-list').append($item);
+						}
+						me.resetload();
+					},1500)
+				},
+				error: function(xhr, type){
+					alert('Ajax error!');
+					// 即使加载出错，也得重置
+					me.resetload();
+				}
+			});
+		}
+	});
+</script>
+</body>
+</html>

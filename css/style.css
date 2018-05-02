@@ -229,3 +229,69 @@ input.search::-webkit-input-placeholder{
     text-align: justify;
     line-height: 23px;
 }
+.team-info{}
+.team-info .head{
+    height: 56px;
+    background:#70A3EB ;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+.team-info .head .search-box{
+    float: left;
+}
+.team-info .head input.search{
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0.15) url('../img/icon-search.png') no-repeat 10px center;
+    height: 30px;
+    width: calc(100% - 100px);
+    margin-left: 20px;
+    margin-top: 13px;
+    border-radius: 15px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.team-info .head .all{
+    width: 60px;
+    box-sizing: border-box;
+    padding-right: 20px;
+    background: url('../img/icon_arrow_down.png') no-repeat 30px center;
+    line-height: 56px;float: right;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.12px;
+}
+.team-info .info-list{
+    padding-left: 10px;
+    margin-top: 56px;
+}
+.team-info .info-list .info-item{
+    border-bottom: 1px solid #E7ECEF;
+    box-sizing: border-box;
+    padding: 14px 24px 14px 0;
+    background: url('../img/icon_arrow_right@2x.png') no-repeat right center;
+    background-size: 40px;
+}
+.team-info .info-list .info-item .info-title{
+    font-size: 16px;
+    color: #323232;
+    letter-spacing: 0.12px;
+}
+.team-info .info-list .info-item .info-address{
+    font-size: 13px;
+    color: #666666;
+    letter-spacing: 0.12px;
+    text-align: justify;
+    line-height: 22px;
+    margin-top: 10px;
+}
+.team-info .info-list .info-item .info-phone{
+    font-size: 13px;
+    color: #666666;
+    letter-spacing: 0.12px;
+    text-align: justify;
+    line-height: 22px;
+}
