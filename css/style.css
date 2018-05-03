@@ -229,7 +229,9 @@ input.search::-webkit-input-placeholder{
     text-align: justify;
     line-height: 23px;
 }
-.team-info{}
+.team-info{
+    position: relative;
+}
 .team-info .head{
     height: 56px;
     background:#70A3EB ;
@@ -294,4 +296,68 @@ input.search::-webkit-input-placeholder{
     letter-spacing: 0.12px;
     text-align: justify;
     line-height: 22px;
+}
+.info-search{
+    width: 100%;
+    background: rgba(112, 163, 235, 0.97);
+    position: absolute;
+    top: 0;
+    display: none;
+    color: #fff;
+    overflow-y: scroll;
+    padding-bottom: 56px;
+}
+.info-search.on{
+    display: block;
+}
+.info-search .host-city .item{
+    width: 80px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    background: rgba(77, 127, 199, 0.8);
+}
+.info-search .weui-flex{
+    margin-top: 20px;
+}
+.info-search .current{
+    padding: 10px 20px;
+    border-bottom: 1px solid #7ab4e4;
+}
+.info-search .current div{
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.info-search .current .city{
+    font-size: 16px;
+    letter-spacing: 0.12px;
+}
+.info-search .current .tool{
+    font-size: 12px;
+    letter-spacing: 0.12px;
+    line-height: 22px;
+}
+.info-search .host-city{}
+.info-search .host-city .title{
+    font-size: 12px;
+    letter-spacing: 0.12px;
+    padding: 20px 0 10px 20px;
+}
+.info-search .all-city .title{
+    font-size: 12px;
+    letter-spacing: 0.12px;
+    padding: 30px 0 20px 20px;
+    border-bottom: 1px solid #7ab4e4;
+}
+.info-search .all-city .list{
+    padding: 0 0 20px 20px;
+    overflow-y: scroll;
+    height: calc(100% - 180px);
+}
+.info-search .all-city .list .item{
+    font-size: 16px;
+    letter-spacing: 0.12px;
+    line-height: 43px;
+    border-bottom: 1px solid #7ab4e4;
 }

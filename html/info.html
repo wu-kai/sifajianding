@@ -47,6 +47,76 @@
             <div class="info-phone">电话：19288989909</div>
         </div>
     </div>
+    <div class="info-search">
+        <div class="current">
+            <div class="city">成都</div>
+            <div class="tool">Gps自动定位</div>
+        </div>
+        <div class="host-city">
+            <div class="title">热门地区</div>
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <div class="item">双流</div>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <div class="placeholder">
+                            <div class="item">双流</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <div class="placeholder">
+                            <div class="item">双流</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <div class="placeholder">
+                            <div class="item">双流</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <div class="placeholder">
+                            <div class="item">双流</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <div class="placeholder">
+                            <div class="item">双流</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-city">
+            <div class="title">全部地区</div>
+            <div class="list">
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+                <div class="item">温州</div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="../js/zepto.js"></script>
 <script src="../js/dropload.js"></script>
@@ -80,6 +150,28 @@
 			});
 		}
 	});
+	$('.info-search').css({
+        height:$(window).height()
+    });
+    $('.all').on('click',function(){
+    	if($('.info-search').hasClass('on')){
+			$('.info-search').removeClass('on');
+			$('body').css({
+				'overflow':'auto',
+				'position': 'static',
+				'top': 'auto'
+			});
+        }else{
+			$('.info-search').addClass('on');
+
+			$('body').css({
+				'overflow':'hidden',
+				'position': 'fixed',
+				'top': 'scrollTop*(-1)',
+				'height':'100%'
+			});
+        }
+    })
 </script>
 </body>
 </html>
